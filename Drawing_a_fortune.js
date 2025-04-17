@@ -1,11 +1,13 @@
-function omikuji(){
-    let hako = ["大吉","中吉","吉","小吉","凶","大凶"];
-    let index = Math.floor(Math.random() * 6);
-    let unsei = hako[index];
-    if(index == 0){
-    console.log(year + "年の運勢は..." + unsei + "なんですか？");
-    }
+function omikuji() {
+    const hako = ["大吉","中吉","吉","小吉","凶","大凶"];
+    const index = Math.floor(Math.random() * hako.lengh);
+    return hako[index];
 }
-for(let i = 2025;i < 2030;i++){
-    omikuji(i)
-}
+
+const button = document.querySelector("#button");
+const output = document.querySelector("#output");
+
+button.addEventListener("click", function () {
+  const unsei = omikuji();
+  output.textContent = unsei;
+});
