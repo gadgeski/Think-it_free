@@ -7,7 +7,7 @@ function omikuji() {
 const button = document.querySelector("#button");
 const output = document.querySelector("#output");
 
-button.addEventListener("click", function () {
+button.addEventListener("click", function() {
   const unsei = omikuji();
   output.textContent = unsei;
 });
